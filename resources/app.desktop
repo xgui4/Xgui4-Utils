@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Xgui4 Utils
+Comment=An groups of utils made in rust for the coossmic desktop environnement
+Type=Application
+Icon=com.github.xgui4.xgui4-utils
+Exec=xgui4-utils %F
+Terminal=false
+StartupNotify=true
+Categories=COSMIC
+Keywords=COSMIC
+MimeType=
