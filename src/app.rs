@@ -37,7 +37,6 @@ pub enum Message {
     SubscriptionChannel,
     ToggleContextPage(ContextPage),
     UpdateConfig(Config),
-    LaunchUrl(String),
 }
 
 /// Create a COSMIC application from the app model
@@ -71,20 +70,25 @@ impl cosmic::Application for AppModel {
         let mut nav = nav_bar::Model::default();
 
         nav.insert()
-            .text(fl!("page-id", num = 1))
+            .text(fl!("page-id", num = "Home"))
             .data::<Page>(Page::Page1)
-            .icon(icon::from_name("applications-science-symbolic"))
+            .icon(icon::from_name("user-home-symbolic"))
             .activate();
 
         nav.insert()
-            .text(fl!("page-id", num = 2))
+            .text(fl!("page-id", num = "Scripts"))
+            .data::<Page>(Page::Page2)
+            .icon(icon::from_name("applications-utilities-symbolic"));
+
+        nav.insert()
+            .text(fl!("page-id", num = "Preference"))
             .data::<Page>(Page::Page2)
             .icon(icon::from_name("applications-system-symbolic"));
 
         nav.insert()
-            .text(fl!("page-id", num = 3))
+            .text(fl!("page-id", num = "My Website"))
             .data::<Page>(Page::Page3)
-            .icon(icon::from_name("applications-games-symbolic"));
+            .icon(icon::from_name("web-browser-symbolic"));
 
         // Construct the app model with the runtime's core.
         let mut app = AppModel {
@@ -219,13 +223,6 @@ impl cosmic::Application for AppModel {
             Message::UpdateConfig(config) => {
                 self.config = config;
             }
-
-            Message::LaunchUrl(url) => match open::that_detached(&url) {
-                Ok(()) => {}
-                Err(err) => {
-                    eprintln!("failed to open {url:?}: {err}");
-                }
-            },
         }
         Task::none()
     }
@@ -248,10 +245,6 @@ impl AppModel {
 
         let title = widget::text::title3(fl!("app-title"));
 
-        let hash = env!("VERGEN_GIT_SHA");
-        let short_hash: String = hash.chars().take(7).collect();
-        let date = env!("VERGEN_GIT_COMMIT_DATE");
-
         let link = widget::button::link(REPOSITORY)
             .on_press(Message::OpenRepositoryUrl)
             .padding(0);
@@ -261,12 +254,7 @@ impl AppModel {
             .push(title)
             .push(link)
             .push(
-                widget::button::link(fl!(
-                    "git-description",
-                    hash = short_hash.as_str(),
-                    date = date
-                ))
-                .on_press(Message::LaunchUrl(format!("{REPOSITORY}/commits/{hash}")))
+                widget::button::link("")
                 .padding(0),
             )
             .align_x(Alignment::Center)

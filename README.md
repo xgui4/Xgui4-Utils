@@ -2,6 +2,12 @@
 
 An groups of utils made in rust for the coossmic desktop environnement
 
+## Disclairmer
+
+This app is a simple project of a Rust noob ... and this is the very first version so nothing is in the project (at least the GUI) that is usable
+
+## HERE is the information from the template (i didn't write thoses)  
+
 ## Installation
 
 A [justfile](./justfile) is included by default for the [casey/just][just] command runner.

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Xgui4 Utils
-Comment=An groups of utils made in rust for the coossmic desktop environnement
+Comment=An groups of utils made in rust for the cosmic desktop environnement
 Type=Application
-Icon=com.github.xgui4.xgui4-utils
+Icon=resources/icons/hicolor/scalable/apps/icon.svg
 Exec=xgui4-utils %F
 Terminal=false
 StartupNotify=true
