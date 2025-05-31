@@ -2,7 +2,7 @@
 Name=Xgui4 Utils
 Comment=An groups of utils made in rust for the cosmic desktop environnement
 Type=Application
-Icon=resources/icons/hicolor/scalable/apps/icon.svg
+Icon=https://raw.githubusercontent.com/xgui4/Xgui4-Utils/refs/heads/master/resources/icons/hicolor/scalable/apps/icon.svg
 Exec=xgui4-utils %F
 Terminal=false
 StartupNotify=true

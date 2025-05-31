@@ -1,12 +1,12 @@
 # Xgui4 Utils
 
-An groups of utils made in rust for the coossmic desktop environnement
+An groups of utils made in rust for the cosmic desktop environnement
 
 ## Disclairmer
 
-This app is a simple project of a Rust noob ... and this is the very first version so nothing is in the project (at least the GUI) that is usable
+This app is a simple hobby project of a Rust noob ... and this is the very first version so nothing is in the project (at least the GUI) that is usable. 
 
-## HERE is the information from the template (i didn't write thoses)  
+## Here is the information from the template (I didn't write thoses)  
 
 ## Installation
 
@@ -48,3 +48,6 @@ Developers should install [rustup][rustup] and configure their editor to use [ru
 [rust-analyzer]: https://rust-analyzer.github.io/
 [mold]: https://github.com/rui314/mold
 [sccache]: https://github.com/mozilla/sccache
+
+## Code of Respect (Apolitical Code of Conduct)
+[here](code-of-conduct.md)

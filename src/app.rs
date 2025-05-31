@@ -70,23 +70,23 @@ impl cosmic::Application for AppModel {
         let mut nav = nav_bar::Model::default();
 
         nav.insert()
-            .text(fl!("page-id", num = "Home"))
+            .text(fl!("page-home"))
             .data::<Page>(Page::Page1)
             .icon(icon::from_name("user-home-symbolic"))
             .activate();
 
         nav.insert()
-            .text(fl!("page-id", num = "Scripts"))
+            .text(fl!("page-utilities"))
             .data::<Page>(Page::Page2)
             .icon(icon::from_name("applications-utilities-symbolic"));
 
         nav.insert()
-            .text(fl!("page-id", num = "Preference"))
+            .text(fl!("page-preferences"))
             .data::<Page>(Page::Page2)
             .icon(icon::from_name("applications-system-symbolic"));
 
         nav.insert()
-            .text(fl!("page-id", num = "My Website"))
+            .text(fl!("page-website"))
             .data::<Page>(Page::Page3)
             .icon(icon::from_name("web-browser-symbolic"));
 
@@ -104,7 +104,6 @@ impl cosmic::Application for AppModel {
                         // for why in errors {
                         //     tracing::error!(%why, "error loading app config");
                         // }
-
                         config
                     }
                 })
@@ -254,7 +253,7 @@ impl AppModel {
             .push(title)
             .push(link)
             .push(
-                widget::button::link("")
+                widget::button::link("Version 0.0.0.1")
                 .padding(0),
             )
             .align_x(Alignment::Center)

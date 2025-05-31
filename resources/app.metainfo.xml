@@ -6,7 +6,7 @@
   <name>Xgui4 Utils</name>
   <summary>An groups of utils made in rust for the COSMIC desktop environnement</summary>
   <icon type="remote" width="64" height="64" scale="1">
-    https://github.com/xgui4/Xgui4-Utils/raw/main/resources/icons/hicolor/scalable/apps/icon.svg
+    https://raw.githubusercontent.com/xgui4/Xgui4-Utils/refs/heads/master/resources/icons/hicolor/scalable/apps/icon.svg
   </icon>
   <url type="vcs-browser">https://github.com/xgui4/Xgui4-Utils</url>
   <launchable type="desktop-id">com.github.xgui4.xgui4-utils.desktop</launchable>
